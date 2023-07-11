@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Hero } from 'src/app/hero';
 
 @Component({
-  selector: 'name-child',
+  selector: 'app-name-child',
   template: `<h3>{{ name }}</h3>`,
 })
 export class NameChild {

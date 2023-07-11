@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Hero } from 'src/app/hero';
 
 @Component({
-  selector: 'version-child',
+  selector: 'app-version-child',
   template: `<h3>Version {{ major }}.{{ minor }}</h3>
     <h4>Change log:</h4>
     <ul>
