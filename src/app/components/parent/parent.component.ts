@@ -7,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   userName = 'Maria';
+
   updateUser() {
     this.userName = 'Chris';
   }
+
   ngOnInit(): void {
     console.log('ngOnInit from the parent component');
+  }
+
+  isChildDestroyed = false;
+
+  destroyed() {
+    this.isChildDestroyed = true;
   }
 }

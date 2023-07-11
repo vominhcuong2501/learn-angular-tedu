@@ -1,12 +1,14 @@
 import {
   AfterContentChecked,
   AfterContentInit,
+  AfterViewChecked,
   Component,
   ContentChild,
   DoCheck,
   ElementRef,
   Input,
   OnChanges,
+  OnDestroy,
   OnInit,
   SimpleChanges,
   ViewChild,
@@ -18,9 +20,18 @@ import {
   styleUrls: ['./child.component.scss'],
 })
 export class ChildComponent
-  implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked
+  implements
+    OnChanges,
+    OnInit,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewChecked,
+    OnDestroy
 {
   @Input() userName = '';
+  @ViewChild('wrapper') wrapper!: ElementRef;
+  @ContentChild('contentWrapper') content!: ElementRef;
 
   // chạy đầu tiên nếu có binding dữ liệu và sẽ chạy khi có thay đổi còn k có thì không chạy
   ngOnChanges(changes: SimpleChanges) {
@@ -44,9 +55,6 @@ export class ChildComponent
     console.log('ngDoCheck triggered');
   }
 
-  @ViewChild('wrapper') wrapper!: ElementRef;
-  @ContentChild('contentWrapper') content!: ElementRef;
-
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit - wrapper', this.wrapper);
     console.log('ngAfterContentInit - contentWrapper', this.content);
@@ -54,5 +62,13 @@ export class ChildComponent
 
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked triggered');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked triggered');
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy triggered');
   }
 }
