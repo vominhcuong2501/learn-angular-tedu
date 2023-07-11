@@ -2,4 +2,7 @@
 <br />
 <br />
 
-<app-child [userName]="userName"></app-child>
+<app-child [userName]="userName">
+  <!-- Add this  -->
+  <div #contentWrapper>foo</div>
+</app-child>
