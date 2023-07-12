@@ -12,6 +12,6 @@ import { Component, ViewChild } from '@angular/core';
     <div class="seconds">{{ timer.seconds }}</div>
     <app-countdown-timer #timer></app-countdown-timer>
   `,
-  styleUrls: ['./countdown.scss'],
+  styleUrls: ['./countdown.component.scss'],
 })
 export class CountdownLocalVarParentComponent {}
