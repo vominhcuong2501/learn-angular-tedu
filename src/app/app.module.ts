@@ -23,6 +23,12 @@ import { CountdownTimerComponent } from './interaction/local-variable/countdown-
 import { ItemDetailComponent } from './Input-Output/item-detail/item-detail.component';
 import { ItemOutputComponent } from './Input-Output/item-output/item-output.component';
 import { GeneralComponent } from './Input-Output/general/general/general.component';
+import { DynamicComponents } from './Dynamic-components/dynamic.component';
+import { HeroJobAd } from './Dynamic-components/hero-job-ad.component';
+import { HeroProfile } from './Dynamic-components/hero-profile.component';
+import { AdBannerComponent } from './Dynamic-components/ad-banner.component';
+import { AdDirective } from './Dynamic-components/ad.directive';
+import { AdService } from './Dynamic-components/ad.service';
 
 @NgModule({
   declarations: [
@@ -48,9 +54,14 @@ import { GeneralComponent } from './Input-Output/general/general/general.compone
     ItemDetailComponent,
     ItemOutputComponent,
     GeneralComponent,
+    DynamicComponents,
+    HeroJobAd,
+    HeroProfile,
+    AdBannerComponent,
+    AdDirective,
   ],
   imports: [BrowserModule],
-  providers: [],
+  providers: [AdService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
