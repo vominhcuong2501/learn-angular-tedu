@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-output',
@@ -10,5 +10,8 @@ export class InputOutputComponent {
 
   addItem(newItem: string) {
     this.items.push(newItem);
+  }
+  crossOffItem(item: string) {
+    console.log(`Parent says: crossing off ${item}. `);
   }
 }

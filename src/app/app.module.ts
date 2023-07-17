@@ -22,6 +22,7 @@ import { CountdownLocalVarParentComponent } from './interaction/local-variable/c
 import { CountdownTimerComponent } from './interaction/local-variable/countdown-timer.component';
 import { ItemDetailComponent } from './Input-Output/item-detail/item-detail.component';
 import { ItemOutputComponent } from './Input-Output/item-output/item-output.component';
+import { GeneralComponent } from './Input-Output/general/general/general.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ItemOutputComponent } from './Input-Output/item-output/item-output.comp
     InputOutputComponent,
     ItemDetailComponent,
     ItemOutputComponent,
+    GeneralComponent,
   ],
   imports: [BrowserModule],
   providers: [],
